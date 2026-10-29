@@ -2,27 +2,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
         x:Class="GuardWallet.MainWindow"
         Title="GuardWallet">
         <StackPanel>
                 <Border Margin="5" Background="LightCoral" CornerRadius="10">
                 <TextBlock 
-                        Text="Welcome to bank"
+                        Text="Authorization to bank profile"
                         Margin="5"
                         FontSize="23"
                         HorizontalAlignment="Center" 
                         VerticalAlignment="Center"/>
                 </Border>
                 <Grid ShowGridLines="True" Margin="5" 
-                      ColumnDefinitions="120, 100"
-                      RowDefinitions="Auto, Auto">
+                      ColumnDefinitions="120, *"
+                      RowDefinitions="Auto, Auto, Auto, Auto">
+                      
+                        
                         
                         <TextBlock Grid.Row="0" Grid.Column="0">Name: </TextBlock>
                         <TextBox Grid.Row="0" Grid.Column="1" Name="nameUser"></TextBox>
                         <TextBlock Grid.Row="1" Grid.Column="0">Age: </TextBlock>
                         <TextBox Grid.Row="1" Grid.Column="1" Name="ageUser"></TextBox>
+                        
+                        <TextBlock Grid.Row="2" Grid.Column="0">Result: </TextBlock>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Name="result"></TextBlock>
+                        <Button Grid.Row="3" Grid.Column="0" Margin="0, 10, 0, 0" Width="100" Click="Authorization_Click">Log in</Button>
                 </Grid>
-        <Button Click="SendData_Click">Send</Button>
         </StackPanel>
 </Window>

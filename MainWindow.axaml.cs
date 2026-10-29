@@ -12,11 +12,17 @@ public partial class MainWindow : Window
         InitializeComponent();
     }
 
-    private void SendData_Click(object? sender, RoutedEventArgs routedEventArgs)
+    private void Authorization_Click(object? sender, RoutedEventArgs routedEventArgs)
     {
         // Debug.WriteLine("Sent data");
-        var nameUser = this.nameUser.Text;
-        var ageUser = this.ageUser.Text;
-        Debug.WriteLine("Sent data: " + "\nName user: " + nameUser + "\nAge user: " + ageUser);
+        string userName = nameUser.Text;
+        int userAge = int.Parse(ageUser.Text);
+        // result.Text = $"Name user: {userName} Age user: {userAge}";
+
+        MainBank bankWindow = new MainBank();
+        
+        bankWindow.Show();
+        
+        this.Close();
     }
 }
