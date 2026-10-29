@@ -19,10 +19,11 @@ public partial class MainWindow : Window
         int userAge = int.Parse(ageUser.Text);
         // result.Text = $"Name user: {userName} Age user: {userAge}";
 
-        MainBank bankWindow = new MainBank();
-        
-        bankWindow.Show();
-        
-        this.Close();
+        if (userAge >= 18 && !string.IsNullOrEmpty(userName))
+        {
+            MainBank bankWindow = new MainBank();
+            bankWindow.Show();
+            this.Close();
+        }
     }
 }
