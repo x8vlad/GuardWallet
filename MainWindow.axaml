@@ -22,11 +22,9 @@
                         
                         <TextBlock Grid.Row="0" Grid.Column="0">Name: </TextBlock>
                         <TextBox Grid.Row="0" Grid.Column="1" Name="nameUser"></TextBox>
-                        <TextBlock Grid.Row="1" Grid.Column="0">Age: </TextBlock>
-                        <TextBox Grid.Row="1" Grid.Column="1" Name="ageUser"></TextBox>
+                        <TextBlock Grid.Row="1" Grid.Column="0">Password: </TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1" Name="passwordUser"></TextBox>
                         
-                        <TextBlock Grid.Row="2" Grid.Column="0">Result: </TextBlock>
-                        <TextBlock Grid.Row="2" Grid.Column="1" Name="result"></TextBlock>
                         <Button Grid.Row="3" Grid.Column="0" Margin="0, 10, 0, 0" Width="100" Click="Authorization_Click">Log in</Button>
                 </Grid>
         </StackPanel>

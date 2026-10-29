@@ -7,6 +7,9 @@ namespace GuardWallet;
 
 public partial class MainWindow : Window
 {
+   
+    
+ 
     public MainWindow()
     {
         InitializeComponent();
@@ -16,13 +19,13 @@ public partial class MainWindow : Window
     {
         // Debug.WriteLine("Sent data");
         string userName = nameUser.Text;
-        int userAge = int.Parse(ageUser.Text);
+        string userPassword = passwordUser.Text;
         // result.Text = $"Name user: {userName} Age user: {userAge}";
 
-        if (userAge >= 18 && !string.IsNullOrEmpty(userName))
+        if (!string.IsNullOrEmpty(userPassword) && !string.IsNullOrEmpty(userName))
         {
-            MainBank bankWindow = new MainBank();
-            bankWindow.Show();
+            MainBank bankWindow = new MainBank(userName);
+            bankWindow.Show(); 
             this.Close();
         }
     }

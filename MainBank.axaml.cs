@@ -6,8 +6,14 @@ namespace GuardWallet;
 
 public partial class MainBank : Window
 {
-    public MainBank()
+    
+    public MainBank(string nameUser)
     {
         InitializeComponent();
+        
+        string currentUser = nameUser;
+
+        this.Title = "Guard Wallet";
+        welcome.Text = $"Welcome {currentUser}!";
     }
 }
