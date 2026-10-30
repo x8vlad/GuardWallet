@@ -24,10 +24,18 @@ public partial class RegisterWindow : Window
         {
             Console.Write("Some fields are missing or epmty\n");
         }
+        
+        else if (!ValidationServices.ArePasswordsEqual(userPassword, userRepeatedPassword))
+        {
+            Console.WriteLine("password do not match");
+        }
+        
         else
         {
             Console.Write($"\nUser login: {userLogin}, \nUser email: {userEmail}, \nUser password: {userPassword} \nUser repeated password: {userRepeatedPassword}");
         }
+        
+        
     }
 
    

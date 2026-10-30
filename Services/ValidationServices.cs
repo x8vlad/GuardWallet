@@ -11,4 +11,14 @@ public static class ValidationServices
         }
         return false;
     }
+
+    public static bool ArePasswordsEqual(string password, string repeatedPassword)
+    {
+        
+        if(!string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(repeatedPassword) && password == repeatedPassword)
+        {
+            return true;
+        }
+        return false;
+    }
 }
