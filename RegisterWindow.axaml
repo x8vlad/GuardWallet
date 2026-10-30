@@ -2,9 +2,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GuardWallet"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GuardWallet.RegisterWindow"
         Title="RegisterWindow"
+        x:DataType="local:RegisterWindow"
         Background="#161618"
         >
     <StackPanel
@@ -19,10 +21,10 @@
         </Border>
         <GroupBox Header="Register Details">
             <StackPanel Spacing="8">
-                <TextBox Name="userLogin" PlaceholderText="Name.." />
-                <TextBox Name="userEmail" PlaceholderText="email.." />
-                <TextBox Name="userPassword" PlaceholderText="Password.." />
-                <TextBox Name="userRepeatedPassword" PlaceholderText="Reapet Password.." />
+                <TextBox Text="{Binding userLogin}" PlaceholderText="Name.." />
+                <TextBox Text="{Binding userEmail}" PlaceholderText="email.." />
+                <TextBox Text="{Binding userPassword}" PlaceholderText="Password.." />
+                <TextBox Text="{Binding userRepeatedPassword}" PlaceholderText="Reapet Password.." />
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Preferences">
@@ -33,7 +35,7 @@
                 
         <GroupBox Header="Register">
             <StackPanel Spacing="8" Orientation="Horizontal">
-                <Button Background="LightSkyBlue" Click="RegisterButton_Click">
+                <Button Background="LightSkyBlue"  Click="RegisterButton_Click">
                     Register
                 </Button>
 
