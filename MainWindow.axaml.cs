@@ -17,6 +17,8 @@ public partial class MainWindow : Window
 
     private void Authorization_Click(object? sender, RoutedEventArgs routedEventArgs)
     {
+        
+        
         // Debug.WriteLine("Sent data");
         string userName = nameUser.Text;
         string userPassword = passwordUser.Text;
