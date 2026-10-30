@@ -4,7 +4,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GuardWallet.RegisterWindow"
-        Title="RegisterWindow">
+        Title="RegisterWindow"
+        Background="#161618"
+        >
     <StackPanel
         Spacing="16" Margin="16">
         <Border Margin="5" Background="LightSkyBlue" CornerRadius="10">

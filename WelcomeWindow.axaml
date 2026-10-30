@@ -2,8 +2,65 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="550"
+        Width="800" Height="550"
         x:Class="GuardWallet.WelcomeWindow"
         Title="WelcomeWindow">
-    Welcome
+    <StackPanel
+        Spacing="16" Margin="16">
+        
+        <!-- <Border Margin="5" Padding="5" Background="LightSkyBlue" CornerRadius="10" HorizontalAlignment="Center"> -->
+        <StackPanel
+            Spacing="8"
+            TextElement.Foreground="#d3d3d3">
+        <TextBlock FontSize="32" FontWeight="Bold" Text="Welcome to GuardWallet"></TextBlock>
+        <TextBlock FontSize="18" Text="GuardWallet is a secure sandbox digital banking platform designed for transaction management and security auditing."></TextBlock>
+        <TextBlock FontSize="16" Text="End-to-end simulated transaction ledger"></TextBlock>
+        <TextBlock FontSize="16" Text="Zero-trust architecture and localized database storage"></TextBlock>
+        <TextBlock FontSize="16" Text="Isolated environment for security research and functional testing"></TextBlock>
+        </StackPanel>
+        <Grid
+            ColumnDefinitions="*, *"
+            RowDefinitions="*">
+            
+            <Border Grid.Column="0" Background="#222228"
+                    BorderBrush="LightSkyBlue"
+                    BorderThickness="2"
+                    BoxShadow="5 5 10 0 DarkGray"
+                    CornerRadius="3"
+                    Padding="10" Margin="10">
+                
+                <StackPanel Spacing="12">
+                    <TextBlock Text="New User?" FontSize="16" FontWeight="Bold" Foreground="White" />
+                    <TextBlock Text="Create a new wallet profile and secure access credentials." 
+                               TextWrapping="Wrap" FontSize="15" Foreground="#d3d3d3" />
+                    <Button 
+                            Content="Register" 
+                            Background="LightSkyBlue" 
+                            HorizontalAlignment="Stretch" 
+                            HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            
+            <Border Grid.Column="1" Background="#222228"
+                    BorderBrush="LightSkyBlue"
+                    BorderThickness="2"
+                    BoxShadow="5 5 10 0 DarkGray"
+                    CornerRadius="3"
+                    Padding="10" Margin="10">
+                <StackPanel Spacing="12">
+                    <TextBlock Text="Existing User?" FontSize="16" FontWeight="Bold" Foreground="White" />
+                    <TextBlock Text="Sign in to manage your balance, logs, and internal transfers." 
+                               TextWrapping="Wrap" FontSize="15" Foreground="#d3d3d3" />
+                    <Button 
+                        Content="Authorization" 
+                        Background="LightSkyBlue" 
+                        HorizontalAlignment="Stretch" 
+                        HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </Border>
+            
+        </Grid>
+        
+    </StackPanel>
 </Window>
