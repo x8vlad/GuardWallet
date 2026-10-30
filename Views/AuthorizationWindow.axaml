@@ -2,29 +2,24 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:GuardWallet"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="GuardWallet.RegisterWindow"
-        Title="RegisterWindow"
-        x:DataType="local:RegisterWindow"
-        Background="#161618"
-        >
+        x:Class="GuardWallet.Views.AuthorizationWindow"
+      
+        Title="Authorization">
     <StackPanel
         Spacing="16" Margin="16">
         <Border Margin="5" Background="LightSkyBlue" CornerRadius="10">
             <TextBlock 
-                Text="Register to bank profile"
+                Text="Authorization to bank profile"
                 Margin="5"
                 FontSize="23"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center"/>
         </Border>
-        <GroupBox Header="Register Details">
+        <GroupBox Header="Authorization Details">
             <StackPanel Spacing="8">
-                <TextBox Text="{Binding userLogin}" PlaceholderText="Name.." />
-                <TextBox Text="{Binding userEmail}" PlaceholderText="email.." />
-                <TextBox Text="{Binding userPassword}" PlaceholderText="Password.." />
-                <TextBox Text="{Binding userRepeatedPassword}" PlaceholderText="Reapet Password.." />
+                <TextBox Name="userLogin" PlaceholderText="Name.." />
+                <TextBox Name="userPassword" PlaceholderText="Password.." />
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Preferences">
@@ -33,14 +28,14 @@
             </StackPanel>
         </GroupBox>
                 
-        <GroupBox Header="Register">
+        <GroupBox Header="Authorization">
             <StackPanel Spacing="8" Orientation="Horizontal">
-                <Button Background="LightSkyBlue"  Click="RegisterButton_Click">
-                    Register
-                </Button>
-
-                <Button Background="LightSkyBlue">
+                <Button Background="LightSkyBlue" Click="Button_OnClick">
                     Authorization
+                </Button>
+                      
+                <Button Background="LightSkyBlue">
+                    Register
                 </Button>
             </StackPanel>
         </GroupBox>

@@ -1,11 +1,9 @@
 using System;
-using System.Diagnostics;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
+using GuardWallet.Services;
 
-namespace GuardWallet;
+namespace GuardWallet.Views;
 
 public partial class RegisterWindow : Window
 {
@@ -22,7 +20,7 @@ public partial class RegisterWindow : Window
     
     private void RegisterButton_Click(object? sender, RoutedEventArgs e)
     {
-        if (!checkFields(userLogin, userEmail, userPassword, userRepeatedPassword))
+        if (!ValidationServices.isRegisterFormValid(userLogin, userEmail, userPassword, userRepeatedPassword))
         {
             Console.Write("Some fields are missing or epmty\n");
         }
@@ -32,13 +30,5 @@ public partial class RegisterWindow : Window
         }
     }
 
-    private bool checkFields(string name, string email, string password, string repeatedPassword)
-    {
-        if (!string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(email) 
-                                        && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(repeatedPassword))
-        {
-           return true;
-        }
-        return false;
-    }
+   
 }

@@ -1,9 +1,7 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Markup.Xaml;
 
-namespace GuardWallet;
+namespace GuardWallet.Views;
 
 public partial class AuthorizationWindow : Window
 {

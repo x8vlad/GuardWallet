@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="830" d:DesignHeight="550"
-        x:Class="GuardWallet.WelcomeWindow"
+        x:Class="GuardWallet.Views.WelcomeWindow"
         Title="WelcomeWindow">
     <StackPanel
         Spacing="16" Margin="16">

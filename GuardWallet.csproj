@@ -17,4 +17,19 @@
     </PackageReference>
     <PackageReference Include="MessageBox.Avalonia" Version="12.1.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\AuthorizationWindow.axaml.cs">
+      <DependentUpon>AuthorizationWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RegisterWindow.axaml.cs">
+      <DependentUpon>RegisterWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\WelcomeWindow.axaml.cs">
+      <DependentUpon>WelcomeWindow.axaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
 </Project>
