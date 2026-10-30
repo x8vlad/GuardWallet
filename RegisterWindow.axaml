@@ -1,0 +1,45 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="GuardWallet.RegisterWindow"
+        Title="RegisterWindow">
+    <StackPanel
+        Spacing="16" Margin="16">
+        <Border Margin="5" Background="LightSkyBlue" CornerRadius="10">
+            <TextBlock 
+                Text="Register to bank profile"
+                Margin="5"
+                FontSize="23"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"/>
+        </Border>
+        <GroupBox Header="Register Details">
+            <StackPanel Spacing="8">
+                <TextBox Name="userLogin" PlaceholderText="Name.." />
+                <TextBox Name="userEmail" PlaceholderText="email.." />
+                <TextBox Name="userPassword" PlaceholderText="Password.." />
+                <TextBox Name="userRepeatedPassword" PlaceholderText="Reapet Password.." />
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Header="Preferences">
+            <StackPanel Spacing="8">
+                <CheckBox IsChecked="True" Content="Dark mode" />
+            </StackPanel>
+        </GroupBox>
+                
+        <GroupBox Header="Register">
+            <StackPanel Spacing="8" Orientation="Horizontal">
+                <Button Background="LightSkyBlue" Click="RegisterButton_Click">
+                    Register
+                </Button>
+
+                <Button Background="LightSkyBlue">
+                    Authorization
+                </Button>
+            </StackPanel>
+        </GroupBox>
+                
+    </StackPanel>
+</Window>
