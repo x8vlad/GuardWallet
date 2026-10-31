@@ -8,11 +8,11 @@
         x:Class="GuardWallet.Views.RegisterWindow"
         Title="RegisterWindow"
         x:DataType="views:RegisterWindow"
-        Background="#161618"
+        Background="#121212"
         >
     <StackPanel
         Spacing="16" Margin="16">
-        <Border Margin="5" Background="LightSkyBlue" CornerRadius="10">
+        <Border Margin="5" Background="#6366F1" CornerRadius="10">
             <TextBlock 
                 Text="Register to bank profile"
                 Margin="5"
@@ -36,11 +36,11 @@
                 
         <GroupBox Header="Register">
             <StackPanel Spacing="8" Orientation="Horizontal">
-                <Button Background="LightSkyBlue"  Click="RegisterButton_Click">
+                <Button Background="#3B82F6"  Click="RegisterButton_Click">
                     Register
                 </Button>
 
-                <Button Background="LightSkyBlue">
+                <Button Background="#3B82F6">
                     Authorization
                 </Button>
             </StackPanel>

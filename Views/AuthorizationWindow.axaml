@@ -4,11 +4,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GuardWallet.Views.AuthorizationWindow"
-      
+        Background="#121212"
         Title="Authorization">
     <StackPanel
         Spacing="16" Margin="16">
-        <Border Margin="5" Background="LightSkyBlue" CornerRadius="10">
+        <Border Margin="5" Background="#6366F1" CornerRadius="10">
             <TextBlock 
                 Text="Authorization to bank profile"
                 Margin="5"
@@ -30,11 +30,11 @@
                 
         <GroupBox Header="Authorization">
             <StackPanel Spacing="8" Orientation="Horizontal">
-                <Button Background="LightSkyBlue" Click="Button_OnClick">
+                <Button Background="#6366F1" Click="Button_OnClick">
                     Authorization
                 </Button>
                       
-                <Button Background="LightSkyBlue">
+                <Button Background="#6366F1">
                     Register
                 </Button>
             </StackPanel>
