@@ -1,0 +1,61 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="GuardWallet.Views.DashboardWindow"
+        Title="DashboardWindow">
+    
+    <SplitView
+        IsPaneOpen="True"
+        DisplayMode="Inline"
+        OpenPaneLength="150">
+        <SplitView.Pane>
+            <StackPanel>
+                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto">
+                <TextBlock Text="History" Grid.Row="0"
+                           FontSize="24"
+                           Padding="15"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/> 
+            <Separator Grid.Row="1" Height="1" Background="#333333"/>
+            
+            <TextBlock Grid.Row="2" Text="Income"
+                       FontSize="18"
+                       Padding="15"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"/>    
+            <TextBlock Grid.Row="3" Text="Expenses"
+                       FontSize="18"
+                       Padding="15"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"/>
+            <TextBlock Grid.Row="4" Text="Cash Flow"
+                       FontSize="18"
+                       Padding="15"
+                       VerticalAlignment="Center"   
+                       HorizontalAlignment="Left"/>
+                <TextBlock Grid.Row="5" Text="Pending.."
+                           FontSize="18"
+                           Padding="15"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+            <TextBlock Grid.Row="6" Text="Commission"
+                       FontSize="18"
+                       Padding="15"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"/>
+                </Grid>
+            </StackPanel> 
+        </SplitView.Pane>
+
+        <Grid Margin="16">
+            <TextBlock Text="Welcome Name"
+                       FontSize="32"
+                       VerticalAlignment="Top"
+                       HorizontalAlignment="Left"
+                       />
+        </Grid>  
+        
+    </SplitView>
+</Window>
