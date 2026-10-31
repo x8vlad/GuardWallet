@@ -26,5 +26,6 @@ public partial class AuthorizationWindow : Window
         {
             Console.Write($"Login successful, data: \n {userLogin}, {userPassword}");
         }
+        
     }
 }
