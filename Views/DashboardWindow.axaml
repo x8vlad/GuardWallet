@@ -4,58 +4,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GuardWallet.Views.DashboardWindow"
-        Title="DashboardWindow">
+        Title="DashboardWindow" Background="#121212">
     
     <SplitView
         IsPaneOpen="True"
         DisplayMode="Inline"
         OpenPaneLength="150">
+        
         <SplitView.Pane>
-            <StackPanel>
-                <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto" ColumnDefinitions="Auto">
-                <TextBlock Text="History" Grid.Row="0"
-                           FontSize="24"
-                           Padding="15"
-                           VerticalAlignment="Center"
+            <StackPanel Margin="0,10,0,0">
+                <TextBlock Text="History"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Padding="15,10"
+                           Foreground="White"
                            HorizontalAlignment="Left"/> 
-            <Separator Grid.Row="1" Height="1" Background="#333333"/>
-            
-            <TextBlock Grid.Row="2" Text="Income"
-                       FontSize="18"
-                       Padding="15"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"/>    
-            <TextBlock Grid.Row="3" Text="Expenses"
-                       FontSize="18"
-                       Padding="15"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"/>
-            <TextBlock Grid.Row="4" Text="Cash Flow"
-                       FontSize="18"
-                       Padding="15"
-                       VerticalAlignment="Center"   
-                       HorizontalAlignment="Left"/>
-                <TextBlock Grid.Row="5" Text="Pending.."
-                           FontSize="18"
-                           Padding="15"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Left"/>
-            <TextBlock Grid.Row="6" Text="Commission"
-                       FontSize="18"
-                       Padding="15"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"/>
-                </Grid>
-            </StackPanel> 
+                <Separator Height="1" Background="#333333" Margin="10,0"/>
+                
+                <TextBlock Text="Income" FontSize="16" Padding="15,10" Foreground="#AAAAAA" HorizontalAlignment="Left"/>    
+                <TextBlock Text="Expenses" FontSize="16" Padding="15,10" Foreground="#AAAAAA" HorizontalAlignment="Left"/>
+                <TextBlock Text="Cash Flow" FontSize="16" Padding="15,10" Foreground="#AAAAAA" HorizontalAlignment="Left"/>
+                <TextBlock Text="Pending.." FontSize="16" Padding="15,10" Foreground="#AAAAAA" HorizontalAlignment="Left"/>
+                <TextBlock Text="Commission" FontSize="16" Padding="15,10" Foreground="#AAAAAA" HorizontalAlignment="Left"/>
+            </StackPanel>
         </SplitView.Pane>
-
-        <Grid Margin="16">
-            <TextBlock Text="Welcome Name"
+        
+            <Grid Margin="24"
+                  RowDefinitions="Auto, Auto, Auto">
+                <TextBlock Grid.Row="0" Text="Welcome Name"
                        FontSize="32"
-                       VerticalAlignment="Top"
-                       HorizontalAlignment="Left"
+                       FontWeight="SemiBold"
+                       Margin="0,0,0, 20"
                        />
-        </Grid>  
+          
+                <Border Grid.Row="1" Background="#1A1A1A" BorderThickness="1" Padding="24" CornerRadius="20"> 
+                    <Grid
+                        ColumnDefinitions="*, Auto" VerticalAlignment="Center">
+                        <TextBlock Grid.Column="0" Text="3.0000$" FontSize="36" FontWeight="Bold" Foreground="AliceBlue" VerticalAlignment="Center"></TextBlock>
+                        
+                        <TextBlock Grid.Column="1" Text="↗" FontSize="32" Foreground="#4CAF50" VerticalAlignment="Center" Margin="15,0,0,0"></TextBlock>
+                    </Grid>                     
+                </Border>
+                
+                    <Grid Grid.Row="2" RowDefinitions="Auto, Auto" ColumnDefinitions="*, 12, *">
+                            <Button Grid.Column="0"  Grid.Row="0" Content="Transfer" HorizontalAlignment="Stretch" 
+                                    HorizontalContentAlignment="Center"
+                                    Grid.ColumnSpan="3"
+                                    VerticalContentAlignment="Center"
+                                    Height="75"  
+                                    Margin="0, 80, 0, 10"
+                                    CornerRadius="12"></Button>
+                        
+                            <Button Grid.Row="1" Grid.Column="0" Content="Investition" HorizontalAlignment="Stretch" 
+                                    HorizontalContentAlignment="Center"
+                                    Height="55" 
+                                    VerticalContentAlignment="Center"
+                                    Margin="0, 10, 0, 20"
+                                    CornerRadius="12"></Button>
+
+                            <Button Grid.Row="1" Grid.Column="2" Content="add card" HorizontalAlignment="Stretch" 
+                                    HorizontalContentAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    Height="55" 
+                                    Margin="0, 10, 0, 20"
+                                    CornerRadius="12"></Button>
+                    </Grid>
+            </Grid>  
         
     </SplitView>
 </Window>
