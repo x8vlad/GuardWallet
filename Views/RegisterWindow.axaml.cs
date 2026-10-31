@@ -30,6 +30,12 @@ public partial class RegisterWindow : Window
             Console.WriteLine("password do not match");
         }
         
+        else if (!ValidationServices.isEmailValid(userEmail))
+        {
+            Console.WriteLine("Email does not correct");
+
+        }
+        
         else
         {
             Console.Write($"\nUser login: {userLogin}, \nUser email: {userEmail}, \nUser password: {userPassword} \nUser repeated password: {userRepeatedPassword}");
