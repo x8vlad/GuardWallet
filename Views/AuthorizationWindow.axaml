@@ -2,10 +2,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:GuardWallet.Views"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GuardWallet.Views.AuthorizationWindow"
         Background="#121212"
-        Title="Authorization">
+        Title="Authorization"
+        x:DataType="views:AuthorizationWindow">
     <StackPanel
         Spacing="16" Margin="16">
         <Border Margin="5" Background="#6366F1" CornerRadius="10">
@@ -18,8 +20,8 @@
         </Border>
         <GroupBox Header="Authorization Details">
             <StackPanel Spacing="8">
-                <TextBox Name="userLogin" PlaceholderText="Name.." />
-                <TextBox Name="userPassword" PlaceholderText="Password.." />
+                <TextBox Text="{Binding userLogin}"  PlaceholderText="Name.." />
+                <TextBox Text="{Binding userPassword}" PlaceholderText="Password.." />
             </StackPanel>
         </GroupBox>
         <GroupBox Header="Preferences">
@@ -30,7 +32,7 @@
                 
         <GroupBox Header="Authorization">
             <StackPanel Spacing="8" Orientation="Horizontal">
-                <Button Background="#6366F1" Click="Button_OnClick">
+                <Button Background="#6366F1" Click="LoginButton_OnClick">
                     Authorization
                 </Button>
                       
