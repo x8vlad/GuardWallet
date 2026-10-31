@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 namespace GuardWallet.Services;
 
@@ -23,7 +24,13 @@ public static class ValidationServices
 
         return false;
     }
-    
+
+    public static bool isEmailValid(string email)
+    {
+        string pattern = "^[a-zA-Z0-9]+@{1}[a-zA-Z0-9]+\\.[a-zA-Z]+$";
+        bool isMatch = Regex.IsMatch(email, pattern);
+        return isMatch;
+    }
 
     public static bool ArePasswordsEqual(string password, string repeatedPassword)
     {
